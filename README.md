@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dion Store
 
-## Getting Started
+This project is a Simple eCommerce Web Application built using Next.js, a React-based framework for server-side rendering. The application allows users to browse products, add items to a shopping cart.
 
-First, run the development server:
+## Features
+
+- Product List: Displays a catalog of products with details such as images, prices.
+- Product Filtering and Search: Users can search and filter products by categories and others.
+- Shopping Cart: Users can add/remove items from the cart and update quantities.
+- User Authentication: Users can sign up, log in, and manage their profiles.
+
+The project serves as a foundational eCommerce solution, suitable for small businesses
+
+## Setup and Run Instruction
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- Node.js: You need Node.js version ^20.x or later. You can download it from [node.js](https://nodejs.org).
+
+### 1. Clone the Repository
+
+Clone the repository to your local machine using Git:
+
+```bash
+git clone https://github.com/dionannd/jubelio-test my-app
+cd my-app
+```
+
+### 2. Install Dependencies
+
+Install the required dependencies using npm or Yarn:
+
+Using npm:
+
+```bash
+npm install
+```
+
+Using Yarn:
+
+```bash
+yarn install
+```
+
+### 3. Run the Development Server
+
+Start the development server:
+
+Using npm:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Using Yarn:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+yarn dev
+```

@@ -29,4 +29,22 @@ export const productServices = {
     const response = await apiInstance.get('/products/category-list');
     return response.data;
   },
+
+  async save(data: TProduct): Promise<TProduct> {
+    const response = await apiInstance.post('/products/add', data);
+    return response.data;
+  },
+
+  async update(data: TProduct): Promise<TProduct> {
+    const { id } = data;
+    delete data.id;
+
+    const response = await apiInstance.put(`/products/${id}`, data);
+    return response.data;
+  },
+
+  async delete(id: number) {
+    const response = await apiInstance.delete(`/products/${id}`);
+    return response.data;
+  },
 };

@@ -1,3 +1,4 @@
+import { ThemeToggle } from '@/components/button/theme-toggle';
 import AuthLayout from '@/components/layouts/auth-layout';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -28,6 +29,7 @@ export function DashboardContainer({
             <MobileNav />
             <PageBreadcrumb breadcrumb={breadcrumb} />
             <div className="relative ml-auto flex-1 md:grow-0"></div>
+            <ThemeToggle />
             <UserNav />
           </header>
           {scrollable ? (

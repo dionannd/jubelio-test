@@ -44,7 +44,7 @@ export default function LoginPage() {
     try {
       const response = await apiInstance.post('/auth/login', {
         ...formData,
-        expiresInMins: 2,
+        // expiresInMins: 2,
       });
 
       if (response.status === 200) {

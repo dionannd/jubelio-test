@@ -6,16 +6,16 @@ export interface TResponseProduct {
 }
 
 export interface TProduct {
-  id: number;
+  id?: number;
   title: string;
   description: string;
   category: string;
   price: number;
   stock: number;
   thumbnail: string;
-  images: string[];
-  rating: number;
-  reviews: TReview[];
+  images?: string[];
+  rating?: number;
+  reviews?: TReview[];
 }
 
 export interface TReview {

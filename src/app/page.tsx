@@ -6,22 +6,18 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
+import { AddCartButton } from '@/components/button/add-cart-button';
 import { Filtering } from '@/components/sections/filtering';
 import { PageContainer } from '@/components/sections/page-container';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-
-import { useCartStore } from '@/store/useCartStore';
 
 import { productServices } from '@/services/product.service';
 
 export default function Home() {
   const { ref, inView } = useInView({ threshold: 1.0 });
-  const { add: addToCart } = useCartStore();
 
   const [selectedCategory, setSelectedCategory] = useState('');
   const [search, setSearch] = useState('');
-  const [isCartOpen, setIsCartOpen] = useState(false);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [sortOrder, setSortOrder] = useState({
     field: '',
@@ -74,7 +70,7 @@ export default function Home() {
   }
 
   return (
-    <PageContainer isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen}>
+    <PageContainer>
       <Filtering
         isFilterOpen={isFilterOpen}
         setIsFilterOpen={setIsFilterOpen}
@@ -108,12 +104,10 @@ export default function Home() {
                   <p className="text-sm text-muted-foreground">
                     {product.category}
                   </p>
-                  <div className="mt-2 flex items-center justify-between">
+                  <div className="my-2 flex items-center justify-between">
                     <span className="font-bold">${product.price}</span>
-                    <Button onClick={() => addToCart(product)}>
-                      Add to Cart
-                    </Button>
                   </div>
+                  <AddCartButton product={product} />
                 </CardContent>
               </Card>
             ))

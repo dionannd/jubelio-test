@@ -178,12 +178,12 @@ export function DataTable<TData, TValue>({
           onChange={(event) =>
             table.getColumn(searchKey)?.setFilterValue(event.target.value)
           }
-          className="w-full md:max-w-sm"
+          className="mb-2 w-full md:max-w-sm"
         />
       )}
 
       {isLoading ? (
-        <div className="h-[calc(80vh-220px)] w-full animate-pulse rounded-md border border-gray-200 bg-white">
+        <div className="h-[calc(80vh-220px)] w-full animate-pulse rounded-md border border-gray-200 bg-white p-4">
           Loading...
         </div>
       ) : (
@@ -274,7 +274,7 @@ export function DataTable<TData, TValue>({
           </div>
           <div className="flex w-full items-center justify-between gap-2 sm:justify-end">
             <div className="flex w-[100px] items-center justify-center text-sm font-medium">
-              Page {table.getState().pagination.pageIndex + 1} dari{' '}
+              Page {table.getState().pagination.pageIndex + 1} of{' '}
               {table.getPageCount()}
             </div>
             <div className="flex items-center space-x-2">

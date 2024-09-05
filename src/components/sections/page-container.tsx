@@ -1,16 +1,16 @@
+'use client';
+
+import { useState } from 'react';
+
 import { HeaderStore } from '@/components/sections/header';
 
 type PageContainerProps = {
-  isCartOpen: boolean;
-  setIsCartOpen: (isCartOpen: boolean) => void;
   children: React.ReactNode;
 };
 
-export function PageContainer({
-  isCartOpen,
-  setIsCartOpen,
-  children,
-}: PageContainerProps) {
+export function PageContainer({ children }: PageContainerProps) {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
   return (
     <div className="flex min-h-screen flex-col">
       <HeaderStore isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />

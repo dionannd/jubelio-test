@@ -1,32 +1,33 @@
-import Link from "next/link";
+import Link from 'next/link';
+
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbPage,
   BreadcrumbSeparator,
-} from "../ui/breadcrumb";
+} from '@/components/ui/breadcrumb';
 
-export function PageBreadcrumb() {
+import { TBreadcrumb } from '@/types/breadcrumb';
+
+type PageBreadcrumbProps = {
+  breadcrumb?: TBreadcrumb[];
+};
+
+export function PageBreadcrumb({ breadcrumb }: PageBreadcrumbProps) {
   return (
     <Breadcrumb className="hidden md:flex">
       <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink asChild>
-            <Link href="#">Dashboard</Link>
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbLink asChild>
-            <Link href="#">Orders</Link>
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbPage>Recent Orders</BreadcrumbPage>
-        </BreadcrumbItem>
+        {breadcrumb?.map((item, index) => (
+          <div key={index} className="flex items-center gap-2">
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href={item.link}>{item.name}</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            {index < breadcrumb.length - 1 && <BreadcrumbSeparator />}
+          </div>
+        ))}
       </BreadcrumbList>
     </Breadcrumb>
   );

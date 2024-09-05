@@ -1,9 +1,9 @@
-import { PageContainer } from "@/components/layouts/page-container";
+import { DashboardContainer } from '@/components/layouts/dashboard-container';
 
 export default function CartPage() {
   return (
-    <PageContainer>
+    <DashboardContainer>
       <div>Cart</div>
-    </PageContainer>
+    </DashboardContainer>
   );
 }

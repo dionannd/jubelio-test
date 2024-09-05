@@ -1,20 +1,15 @@
-"use client";
+'use client';
 
-import {
-  PanelLeft,
-  Package2,
-  Home,
-  ShoppingCart,
-  Package,
-  Users2,
-  LineChart,
-} from "lucide-react";
-import { Button } from "../ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import Link from "next/link";
-import { navigation } from "@/constant/navigation";
-import { cn } from "@/lib/utils";
-import { usePathname } from "next/navigation";
+import { Package2, PanelLeft } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+import { cn } from '@/lib/utils';
+
+import { navigation } from '@/constant/navigation';
+
+import { Button } from '../ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 
 export function MobileNav() {
   const pathname = usePathname();
@@ -41,10 +36,10 @@ export function MobileNav() {
               key={index}
               href={item.href}
               className={cn(
-                "flex items-center gap-4 px-2.5",
+                'flex items-center gap-4 px-2.5',
                 pathname === item.href
-                  ? "text-foreground"
-                  : "text-muted-foreground hover:text-foreground",
+                  ? 'text-foreground'
+                  : 'text-muted-foreground hover:text-foreground',
               )}
             >
               <item.icon className="h-5 w-5" />

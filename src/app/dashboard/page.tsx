@@ -1,9 +1,11 @@
-import { PageContainer } from "@/components/layouts/page-container";
+import { DashboardContainer } from '@/components/layouts/dashboard-container';
 
 export default function DashboardPage() {
+  const breadcrumb = [{ name: 'Dashboard', link: '/dashboard' }];
+
   return (
-    <PageContainer>
+    <DashboardContainer breadcrumb={breadcrumb}>
       <div>Dashboard</div>
-    </PageContainer>
+    </DashboardContainer>
   );
 }

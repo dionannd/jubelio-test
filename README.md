@@ -9,7 +9,7 @@ This project is a Simple eCommerce Web Application built using Next.js, a React-
 - Shopping Cart: Users can add/remove items from the cart and update quantities.
 - User Authentication: Users can sign up, log in, and manage their profiles.
 
-The project serves as a foundational eCommerce solution, suitable for small businesses. To enter the dashboard, please go to [/sign-in](https://dion-store.vercel.app/sign-in)
+The project serves as a foundational eCommerce solution, suitable for small businesses. To enter the dashboard, please go to [/sign-in](https://dion-store.vercel.app/sign-in).
 
 ## Setup and Run Instruction
 
